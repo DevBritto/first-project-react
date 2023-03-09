@@ -1,8 +1,8 @@
 import React, {useState, useRef, useEffect} from "react"
 import  axios  from "axios"
-import People from "./assets/peoples.png"
-import Arrow from './assets/Seta.png'
-import Trash from './assets/Lixo.png'
+import People from "../../assets/peoples.png"
+import Arrow from '../../assets/Seta.png'
+import Trash from '../../assets/Lixo.png'
 import {
   Container,
   H1,
@@ -34,7 +34,7 @@ function App() {
    name: inputName.current.value,
    age: inputAge.current.value,
  });
-    setUsers([...users,{id: Math.random(), name:inputName.current.value, age:inputAge.current.value}])
+    setUsers([...users, newUser])
 
   //const {data: newUsers} = await axios.get("http://localhost:3001/users")
   //setUsers(newUsers)
@@ -47,7 +47,7 @@ function App() {
        setUsers(newUsers);
      }
       fetchUsers()
-  }, [])
+  }, [users])
 
  async function deleteUser(userId) {
 
