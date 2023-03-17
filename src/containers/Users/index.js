@@ -1,5 +1,6 @@
 import React, {useState,  useEffect} from "react"
 import  axios  from "axios"
+import { useHistory } from "react-router-dom"
 import Avatar from "../../assets/avatar.png"
 import Arrow from '../../assets/Seta.png'
 import Trash from '../../assets/Lixo.png'
@@ -14,7 +15,8 @@ import {
 
 function Users() {
   const [users, setUsers] = useState([]);
-  
+  const history = useHistory()
+  console.log(history)
 // Modo 1 de coletar dados do input(funções ativadas por onChange)
 
 // function changeInputName(event) {
@@ -43,7 +45,10 @@ function Users() {
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
   }
-  
+  function goBackPage(){
+    history.push("/")
+    
+  }
   
 
   return (
@@ -61,7 +66,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button to="/">
+        <Button onClick={goBackPage} >
           <img alt="seta" src={Arrow} /> Voltar
           </Button>
       </ContainerItens>

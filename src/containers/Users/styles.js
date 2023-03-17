@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Background from '../../assets/Fundo2.png'
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
      background: url("${Background}");
@@ -10,7 +9,8 @@ export const Container = styled.div`
      flex-direction: column;
      align-items: center;
      gap: 40px;
-     height: 100vh;
+     height: 100%;
+     min-height: 100vh;
 `;
 
 export const H1 = styled.h1`
@@ -40,11 +40,12 @@ export const ContainerItens = styled.div`
    padding: 50px 36px;
    display:flex;
    flex-direction: column;
-   height:100vh;
+   height:100%;
+   
 `;
 
 
-export const Button = styled(Link)`
+export const Button = styled.button`
     width: 369px;
     height: 74px;  
     background: transparent;
@@ -60,8 +61,9 @@ export const Button = styled(Link)`
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding-left: 25px;
+    padding-left: 13px;
     margin-top: 120px;
+    padding-right:12px;
    
     img {
         transform: rotateY(180deg);
@@ -87,6 +89,8 @@ export const User = styled.li`
     border: none;
     outline: none;
     margin-top: 20px;
+    padding-left: 13px;
+    padding-right: 12px;
 
     p {
         font-style: normal;

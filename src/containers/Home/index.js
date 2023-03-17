@@ -1,5 +1,6 @@
 import React, {useState, useRef} from "react"
 import  axios  from "axios"
+import { useHistory } from "react-router-dom"
 import People from "../../assets/peoples.png"
 import Arrow from '../../assets/Seta.png'
 import {
@@ -14,9 +15,9 @@ import {
 
 function App() {
   const [users, setUsers] = useState([]);
-  const inputName = useRef()
-  const inputAge = useRef()
-  
+  const inputName = useRef();
+  const inputAge = useRef();
+  const history = useHistory();
 // Modo 1 de coletar dados do input(funções ativadas por onChange)
 
 // function changeInputName(event) {
@@ -32,8 +33,9 @@ function App() {
    name: inputName.current.value,
    age: inputAge.current.value,
  });
-    setUsers([...users, newUser])
+    setUsers([...users, newUser]);
 
+    history.push("/usuarios");
   //const {data: newUsers} = await axios.get("http://localhost:3001/users")
   //setUsers(newUsers)
 }  
@@ -48,7 +50,7 @@ function App() {
         <InputLabel>Idade</InputLabel >
         <Input ref={inputAge} placeholder="Idade" />
 
-        <Button to="/usuarios" onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
     
       </ContainerItens>
     </Container>
