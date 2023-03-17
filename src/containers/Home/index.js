@@ -1,6 +1,6 @@
 import React, {useState, useRef} from "react"
 import  axios  from "axios"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import People from "../../assets/peoples.png"
 import Arrow from '../../assets/Seta.png'
 import {
@@ -17,7 +17,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
-  const history = useHistory();
+  const navigate = useNavigate();
 // Modo 1 de coletar dados do input(funções ativadas por onChange)
 
 // function changeInputName(event) {
@@ -35,7 +35,7 @@ function App() {
  });
     setUsers([...users, newUser]);
 
-    history.push("/usuarios");
+    navigate("/usuarios");
   //const {data: newUsers} = await axios.get("http://localhost:3001/users")
   //setUsers(newUsers)
 }  

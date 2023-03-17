@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
-import Users from './containers/Users'
+//import Users from './containers/Users'
 import GlobalStyle from "./GlobalStyle";
 
 ReactDOM.render(
