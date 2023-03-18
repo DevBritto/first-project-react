@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom"
 import Avatar from "../../assets/avatar.png"
 import Arrow from '../../assets/Seta.png'
 import Trash from '../../assets/Lixo.png'
+import ContainerItens from "../../components/Title/ContainerItens"
 import {
   Container,
   H1,
   Image,
-  ContainerItens,
   Button,
   User,
 } from "./styles";

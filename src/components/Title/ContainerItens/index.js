@@ -2,8 +2,8 @@ import React from "react";
 
 import { ContainerItens as Container } from "./styles";
 
-function ContainerItens(){
-       return <Container></Container>
+function ContainerItens({children}){
+       return <Container>{children}</Container>
 
 }       
 

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom"
 import People from "../../assets/peoples.png"
 import Arrow from '../../assets/Seta.png'
 import { H1 } from "../../components/Title/Titlee/styles"
+import ContainerItens from "../../components/Title/ContainerItens"
 import {
   Container,
   Image,
-  ContainerItens,
   InputLabel,
   Input,
   Button,
