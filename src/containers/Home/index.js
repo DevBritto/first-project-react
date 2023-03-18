@@ -3,9 +3,9 @@ import  axios  from "axios"
 import { useNavigate } from "react-router-dom"
 import People from "../../assets/peoples.png"
 import Arrow from '../../assets/Seta.png'
+import { H1 } from "../../components/Title/Titlee/styles"
 import {
   Container,
-  H1,
   Image,
   ContainerItens,
   InputLabel,
@@ -43,7 +43,7 @@ function App() {
     <Container>
       <Image alt="logo-imagem" src={People} />
       <ContainerItens>
-        <H1>Olá!</H1>
+        <H1 abacate={'Esse e meu abacate'}>Olá!</H1>
 
         <InputLabel>Nome</InputLabel >
         <Input ref={inputName} placeholder="Nome" />
