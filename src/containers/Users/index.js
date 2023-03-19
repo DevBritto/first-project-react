@@ -5,11 +5,11 @@ import Avatar from "../../assets/avatar.png"
 import Arrow from '../../assets/Seta.png'
 import Trash from '../../assets/Lixo.png'
 import ContainerItens from "../../components/Title/ContainerItens"
+import Button from "../../components/Title/Button"
 import {
   Container,
   H1,
   Image,
-  Button,
   User,
 } from "./styles";
 
@@ -31,7 +31,7 @@ function Users() {
 
   useEffect(() => {
      async function fetchUsers(){
-      const { data: newUsers } = await axios.get("http://localhost:3001/users");
+      const { data: newUsers } = await axios.get("https://projeto-node-api.vercel.app/users");
 
        setUsers(newUsers);
      }
@@ -40,7 +40,7 @@ function Users() {
 
  async function deleteUser(userId) {
 
-    await axios.delete(`http://localhost:3001/users/${userId}`)
+    await axios.delete(`https://projeto-node-api.vercel.app/users/${userId}`)
     
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
@@ -54,7 +54,7 @@ function Users() {
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isblur={true}>
         <H1>Usuários!</H1>
        
         <ul>
@@ -66,7 +66,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button onClick={goBackPage} >
+        <Button isBack={true} onClick={goBackPage} >
           <img alt="seta" src={Arrow} /> Voltar
           </Button>
       </ContainerItens>

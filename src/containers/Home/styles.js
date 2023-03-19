@@ -33,7 +33,7 @@ export const Input = styled.input`
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
-    width: 342px;
+    width: 368px;
     height: 58px;
     border: none;
     outline: none;
@@ -46,30 +46,4 @@ export const Input = styled.input`
     margin-bottom: 34px;
 `;
 
-export const Button = styled.button`
-    width: 369px;
-    height: 74px;  
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 14px; 
-    border: none;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 28px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding-left: 25px;
-    margin-top: 130px;
 
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-        opacity: 0.5;
-    }
-`

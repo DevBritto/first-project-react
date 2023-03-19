@@ -5,12 +5,12 @@ import People from "../../assets/peoples.png"
 import Arrow from '../../assets/Seta.png'
 import { H1 } from "../../components/Title/Titlee/styles"
 import ContainerItens from "../../components/Title/ContainerItens"
+import Button from "../../components/Title/Button"
 import {
   Container,
   Image,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
 //}
 
  async function addNewUser() {
-   const {data: newUser } = await axios.post("http://localhost:3001/users", {  
+   const {data: newUser } = await axios.post("https://projeto-node-api.vercel.app/users", {  
    name: inputName.current.value,
    age: inputAge.current.value,
  });
